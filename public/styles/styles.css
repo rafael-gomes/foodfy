@@ -1,0 +1,233 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+
+* {
+    margin: 0; 
+    padding: 0; 
+    border:none; 
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    height: 100vh; 
+}
+
+.content {
+    max-width: 940px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+header {
+    max-width: 940px;
+    display: flex;
+    margin-top: 38px;
+    flex-direction: column;
+}
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 38px;
+}
+
+.topnav a:first-child{
+    margin-right: 120px;
+}
+
+.topnav a {
+    color:  #111111;
+    margin-right: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    height: 19px;
+}
+
+.topnav a:hover {
+    color: rgba(0, 0, 0, 0.7);
+    transition: color 200ms;
+}
+
+.banner {
+    margin-top: 32px;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    width: 100%;
+    height: 366px;
+    border-radius: 30px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    max-width: 940px;
+}
+
+.banner .banner-info {
+    width: 500px;
+    text-align: start;
+}
+
+.banner .banner-info h1 {
+    font-family: 'Roboto-Bold';
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.banner .banner-info p {
+    max-width: 300px;
+    font-family: 'Roboto-Regular';
+    /* line-height: 28px; */
+    font-size: 18px;
+    opacity: 70%;
+}
+
+.banner img {
+    margin-top: auto;
+    margin-right: 100px;
+    max-width: 100%;
+}
+
+.recipes h1 {
+    font-family: 'Roboto-Bold';
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.cards {
+    max-width: 940px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    text-align: start;
+}
+
+.card {
+    width: 300px;
+    height: 140px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 56px;
+}
+
+.card__image-container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+.card__info {
+    margin-top: 20px;
+    color: #111111;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card__author {
+    color: #777777;
+    font-size: 14px;
+}
+
+
+footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #999999;   
+    background: #EEEEEE;
+    font-family: Roboto-Regular;
+    font-size: 14px;
+}
+
+/* Modal */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms;
+}
+
+.modal {
+    background:  white;
+    border-radius: 16px;
+    width: 30%;
+    height: 30%;
+    margin: 30vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* Modal.Active */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* About */
+
+.about {
+    text-align: justify;
+    margin: 50px 0;
+    line-height: 28px;
+    color: #111111;
+}
+
+.about .about-info {
+    /* width: 500px; */
+    text-align: start;
+}
+.about .about-info h1 {
+    font-family: Roboto-Bold;
+    font-size: 32px;
+    color: #111111;
+    text-align: start;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.about .about-info p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
