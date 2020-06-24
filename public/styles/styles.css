@@ -1,11 +1,10 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
 
-
 * {
     margin: 0; 
     padding: 0; 
-    border:none; 
-    box-sizing:border-box;
+    border: none; 
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -43,16 +42,22 @@ header {
 }
 
 .topnav a {
+    font-weight: normal;
     color:  #111111;
     margin-right: 30px;
     font-size: 16px;
     text-decoration: none;
     height: 19px;
+    line-height: 24px;
 }
 
 .topnav a:hover {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.5);
     transition: color 200ms;
+}
+
+.topnav a.active {
+    font-weight: bold;
 }
 
 .banner {
@@ -76,15 +81,15 @@ header {
 }
 
 .banner .banner-info h1 {
-    font-family: 'Roboto-Bold';
+    font-weight: bold;
     font-size: 32px;
     margin-bottom: 10px;
 }
 
 .banner .banner-info p {
     max-width: 300px;
-    font-family: 'Roboto-Regular';
-    /* line-height: 28px; */
+    font-weight: normal;
+    line-height: 28px;
     font-size: 18px;
     opacity: 70%;
 }
@@ -96,7 +101,7 @@ header {
 }
 
 .recipes h1 {
-    font-family: 'Roboto-Bold';
+    font-weight: bold;
     font-size: 24px;
     margin-bottom: 10px;
     text-align: justify;
@@ -111,7 +116,7 @@ section {
     max-width: 940px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
     text-align: start;
 }
 
@@ -128,30 +133,21 @@ section {
     border-radius: 15px;
 }
 
-
 .card__info {
     margin-top: 20px;
-    color: #111111;
-    font-size: 18px;
     margin-bottom: 5px;
 }
 
-.card__author {
-    color: #777777;
-    font-size: 14px;
+.card__info h2 {
+    font-weight: normal;
+    font-size: 18px;
+    color: #111111;
 }
 
-
-footer {
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: #999999;   
-    background: #EEEEEE;
-    font-family: Roboto-Regular;
+.card__author p {
+    font-weight: normal;
     font-size: 14px;
+    color: #777777;
 }
 
 /* Modal */
@@ -161,6 +157,11 @@ footer {
     height: 100%;
     position: fixed;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     opacity: 0;
     visibility: hidden;
     transition: 400ms;
@@ -169,19 +170,41 @@ footer {
 .modal {
     background:  white;
     border-radius: 16px;
-    width: 30%;
-    height: 30%;
-    margin: 30vh auto;
-    position: relative;
+    width: 660px;
+    height: 413px;
+    padding: 30px;
+    position: absolute;
+}
+
+.modal img{
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.modal .modal-content {
+    margin-bottom: 60px;
+}
+
+.modal .modal-title h2{
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 24px;
+    color: #111111;
+}
+
+.modal .modal-author p{
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #777777;
 }
 
 .modal .close-modal {
-    color: black;
-    position: absolute;
-    right: 8px;
-    top: 8px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #999999;
     cursor: pointer;
-    margin-bottom: 5px;
 }
 
 /* Modal.Active */
@@ -202,8 +225,8 @@ footer {
 }
 
 /* About */
-
 .about {
+    max-width: 940px;
     text-align: justify;
     margin: 50px 0;
     line-height: 28px;
@@ -211,11 +234,11 @@ footer {
 }
 
 .about .about-info {
-    /* width: 500px; */
     text-align: start;
 }
+
 .about .about-info h1 {
-    font-family: Roboto-Bold;
+    font-weight: bold;
     font-size: 32px;
     color: #111111;
     text-align: start;
@@ -226,8 +249,29 @@ footer {
 .about .about-info p {
     margin-top: 20px;
     margin-bottom: 30px;
-    font-family: Roboto-Regular;
+    font-weight: normal;
     font-size: 18px;
     color: #444444;
     line-height: 28px;
+}
+
+.recipes-cards {
+    margin: 50px 0;
+    max-width: 940px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    text-align: start;
+}
+
+footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #999999;   
+    background: #EEEEEE;
+    font-weight: normal;
+    font-size: 14px;
 }
