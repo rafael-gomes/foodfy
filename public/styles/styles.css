@@ -130,6 +130,7 @@ section {
 
 .card__image-container img {
     width: 100%;
+    height: 140px;
     border-radius: 15px;
 }
 
@@ -148,80 +149,6 @@ section {
     font-weight: normal;
     font-size: 14px;
     color: #777777;
-}
-
-/* Modal */
-.modal-overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: 400ms;
-}
-
-.modal {
-    background:  white;
-    border-radius: 16px;
-    width: 660px;
-    height: 413px;
-    padding: 30px;
-    position: absolute;
-}
-
-.modal img{
-    width: 600px;
-    height: 200px;
-    border-radius: 15px;
-}
-
-.modal .modal-content {
-    margin-bottom: 60px;
-}
-
-.modal .modal-title h2{
-    margin-top: 20px;
-    font-weight: normal;
-    font-size: 24px;
-    color: #111111;
-}
-
-.modal .modal-author p{
-    margin-top: 5px;
-    font-weight: normal;
-    font-size: 18px;
-    color: #777777;
-}
-
-.modal .close-modal {
-    font-weight: normal;
-    font-size: 16px;
-    color: #999999;
-    cursor: pointer;
-}
-
-/* Modal.Active */
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
 }
 
 /* About */
@@ -274,4 +201,92 @@ footer {
     background: #EEEEEE;
     font-weight: normal;
     font-size: 14px;
+}
+
+/* Página da Receita */
+
+.card-recipe {
+    margin: 50px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.card-recipe img {
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+}
+
+.card__recipe-info h2 {
+    margin: 50px 0;
+}
+
+.card__recipe-info h2{
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 4px;
+    color: #111111;
+}
+
+.card__recipe-info p {
+    font-weight: normal;
+    font-size: 20px;
+    color: #777777;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.title h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card__recipe-content {
+    text-align: justify;
+    font-family: normal;
+    font-size: 18px;
+    color: #444444;
+    max-width: 100%;
+}
+
+.card__recipe-content li {
+    margin-left: 20px;
+    
+}
+
+.card__recipe-content li .preparation ol {
+    line-height: 28px;
+}
+
+.card-hide {
+    font-weight: bold;
+    margin-left: 8px;
+    color: #999999;
+    font-size: 12px;
+}
+
+.card-hide:hover {
+    cursor: pointer;
+}
+
+.informations p {
+    font-weight: normal;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.card__recipe-content.active {
+    display: none;
+}
+
+/* Página Not-Found */
+.notFound {
+    color: red;
+    margin: 50px 0;
+    text-align: center;
+    width: 100%;
 }
